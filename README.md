@@ -1,6 +1,6 @@
 
 # Exml2Class 插件使用
-----
+
 
 ## 概述
  Exml2Class 是一款分析Exml文件生成相应Id声明类的插件
