@@ -10,7 +10,7 @@
 ## 安装使用 
   下载对应的插件文件，选择插件栏(Ctrl + Shift + X)，在Egret wing里面进行安装。点击菜单【从WEXT/VSIX 安装...】选择安装文件
   
- ![安装说明](../images/install.png)  
+ ![安装说明](images/install.png)  
   
   
 
