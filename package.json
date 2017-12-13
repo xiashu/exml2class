@@ -1,0 +1,91 @@
+{
+    "name": "exml2class",
+    "displayName": "Exml2Class",
+    "description": "A Simple Extension For Egret Wing.",
+    "version": "1.0.4",
+    "publisher": "egret",
+    "categories": [
+        "Other"
+    ],
+    "icon": "images/icon.svg",
+    "bugs": {
+        "url": "https://github.com/xiashu/exml2class/issues"
+    },
+    "homepage": "https://github.com/xiashu/exml2class/blob/master/README.md",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/xiashu/exml2class.git"
+    },
+    "license": "MIT",
+    "activationEvents": [
+        "onCommand:extension.exml2class",
+        "onCommand:extension.exml2classex",
+        "onCommand:extension.exml2classeConfig",
+        "onCommand:extension.exml2classeimport",
+        "onCommand:extension.exml2classerefresh",
+        "*"
+    ],
+    "engines": {
+        "wing": ">=3.2.6"
+    },
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.exml2class",
+                "title": "快速生成Exml对应的类"
+            },
+            {
+                "command": "extension.exml2classex",
+                "title": "生成Exml类模板"
+            },
+            {
+                "command": "extension.exml2classeimport",
+                "title": "选择导入ExmlID声明"
+            },
+            {
+                "command": "extension.exml2classeConfig",
+                "title": "配置Exml2Class工具类集"
+            },
+            {
+                "command": "extension.exml2classerefresh",
+                "title": "快速刷新ExmlID声明"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "extension.exml2class",
+                "key": "Ctrl+Alt+G"
+            },
+            {
+                "command": "extension.exml2classeimport",
+                "key": "Ctrl+Alt+O"
+            },
+            {
+                "command": "extension.exml2classerefresh",
+                "key": "Alt+R"
+            }
+        ],
+        "menus": {
+            "explorer/context": [
+                {
+                    "when": "resourceLangId == exml",
+                    "command": "extension.exml2classex",
+                    "group": "navigation"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "wing:prepublish": "node ./node_modules/egretwing/bin/compile",
+        "compile": "node ./node_modules/egretwing/bin/compile -watch -p ./",
+        "postinstall": "node ./node_modules/egretwing/bin/install"
+    },
+    "dependencies": {
+        "copy-paste": "^1.1.3"
+    },
+    "devDependencies": {
+        "egretwing": "^3.0.4",
+        "typescript": "^1.7.5"
+    }
+}
